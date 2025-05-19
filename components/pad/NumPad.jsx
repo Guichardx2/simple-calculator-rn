@@ -29,7 +29,8 @@ const NumPad = () => {
                 key={colIndex}
                 mode="contained"
                 style={styles.button}
-                labelStyle={{ fontSize: 20 }}
+                contentStyle={styles.buttonContent}
+                labelStyle={{ fontSize: 25}}
                 onPress={() => {
                   if (item === "C") {
                     setValue('');
@@ -64,7 +65,8 @@ const styles = StyleSheet.create({
   },
   display: {
     marginBottom: 30,
-    paddingRight: 20,
+    paddingRight: 10,
+    paddingLeft: 10,
     fontSize: 45,
     fontWeight: 'bold',
   },
@@ -81,6 +83,11 @@ const styles = StyleSheet.create({
     width: buttonSize,
     height: buttonSize,
     borderRadius: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonContent: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
